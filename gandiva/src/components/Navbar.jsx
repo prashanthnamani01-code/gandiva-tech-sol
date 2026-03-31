@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import gandivaLogo from '../assets/gandiva_logo.jpg'
 import './Navbar.css'
 
 const navLinks = [
@@ -33,7 +34,7 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-inner">
         <a href="#home" className="logo" onClick={() => handleNavClick('#home')}>
-          <span className="logo-icon">⚡</span>
+          <img src={gandivaLogo} alt="Gandiva Tech Solutions" className="logo-img" />
           <span className="logo-text">
             <span className="logo-gandiva">Gandiva</span>
             <span className="logo-tech">Tech Solutions</span>

@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0;
+  padding: 8px 0;
   transition: all 0.4s ease;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -31,20 +31,25 @@
   cursor: pointer;
 }
 
-.logo-icon {
-  font-size: 1.8rem;
-  filter: drop-shadow(0 0 12px rgba(108, 99, 255, 0.8));
+.logo-img {
+  height: 90px;
+  width: 76px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .logo-gandiva {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 900;
   background: var(--grad-primary);
   -webkit-background-clip: text;
@@ -55,10 +60,10 @@
 
 .logo-tech {
   font-family: var(--font-heading);
-  font-size: 0.65rem;
-  font-weight: 500;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-secondary);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   -webkit-text-fill-color: var(--text-secondary);
 }

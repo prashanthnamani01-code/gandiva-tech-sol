@@ -8,12 +8,7 @@ const values = [
   { icon: '🔬', title: 'Innovation Mindset', desc: 'We stay ahead of the technology curve so your business always benefits from the latest breakthroughs.' },
 ]
 
-const team = [
-  { name: 'Prashanth Namani', role: 'CEO & Founder', emoji: '👨‍💼', color: '#6c63ff' },
-  { name: 'Arjun Golla', role: 'Director', emoji: '🚀', color: '#00d4ff' },
-  { name: 'Srujana Namani', role: 'Director', emoji: '💡', color: '#10b981' },
-  { name: 'Mounika Vadla', role: 'Director', emoji: '⚡', color: '#f59e0b' },
-]
+
 
 export default function About() {
   const ref = useRef(null)
@@ -81,22 +76,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="team-preview">
-              <h3 className="team-heading">Leadership Team</h3>
-              <div className="team-grid">
-                {team.map((member) => (
-                  <div key={member.name} className="team-card">
-                    <div className="team-avatar" style={{ borderColor: member.color, boxShadow: `0 0 20px ${member.color}40` }}>
-                      <span>{member.emoji}</span>
-                    </div>
-                    <div className="team-info">
-                      <span className="team-name">{member.name}</span>
-                      <span className="team-role" style={{ color: member.color }}>{member.role}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import heroBanner from '../assets/hero_banner.png'
 import './Hero.css'
 
 const stats = [
-  { value: '7', label: 'Premium Services' },
+  { value: '8', label: 'Premium Services' },
   { value: '3', label: 'Expert Directors' },
   { value: '24/7', label: 'Support Availability' },
   { value: '∞', label: 'Growth Potential' },
@@ -87,6 +87,7 @@ export default function Hero() {
               <div className="ai-bar-group">
                 {[
                   { label: '🤖 AI & Intelligent Automation', color: '#6c63ff' },
+                  { label: '📈 Data Analytics & Engineering', color: '#0891b2' },
                   { label: '📊 Business Transformation', color: '#f59e0b' },
                   { label: '💻 Custom Software Development', color: '#10b981' },
                   { label: '☁️ Cloud & DevOps Engineering', color: '#06b6d4' },

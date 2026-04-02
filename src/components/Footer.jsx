@@ -1,3 +1,4 @@
+import gandivaLogo from '../assets/gandiva_logo.jpg'
 import './Footer.css'
 
 const footerLinks = {
@@ -31,10 +32,10 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer-brand">
           <div className="footer-logo">
-            <span className="footer-logo-icon">⚡</span>
-            <div>
-              <div className="footer-logo-name">Gandiva</div>
-              <div className="footer-logo-sub">Tech Solutions</div>
+            <img src={gandivaLogo} alt="GANDIVA Tech Solutions" className="footer-logo-img" />
+            <div className="footer-logo-title">
+              <span className="footer-logo-gandiva">GANDIVA</span>
+              <span className="footer-logo-techsub">Tech Solutions</span>
             </div>
           </div>
           <p className="footer-tagline">
@@ -49,8 +50,8 @@ export default function Footer() {
             ))}
           </div>
           <div className="footer-contact-brief">
-            <a href="mailto:hello@gandivatechsolutions.com" className="footer-email">
-              hello@gandivatechsolutions.com
+            <a href="mailto:info@gandivatechsolutions.com" className="footer-email">
+              info@gandivatechsolutions.com
             </a>
           </div>
         </div>
@@ -74,7 +75,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p className="footer-copy">
-            © {year} Gandiva Tech Solutions. All rights reserved. Built with ❤️ for the future.
+            © {year} GANDIVA Tech Solutions. All rights reserved. Built with ❤️ for the future.
           </p>
           <p className="footer-domain">
             🌐 <strong>gandivatechsolutions.com</strong>

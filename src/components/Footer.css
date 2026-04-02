@@ -41,26 +41,40 @@
   margin-bottom: 20px;
 }
 
-.footer-logo-icon {
-  font-size: 2rem;
-  filter: drop-shadow(0 0 12px rgba(108, 99, 255, 0.8));
+.footer-logo-img {
+  height: 64px;
+  width: 54px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  flex-shrink: 0;
+  opacity: 0.92;
 }
 
-.footer-logo-name {
+.footer-logo-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.footer-logo-gandiva {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 900;
-  background: var(--grad-primary);
+  background: linear-gradient(135deg, #a5b4fc, #67e8f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: -0.02em;
 }
 
-.footer-logo-sub {
-  font-size: 0.65rem;
-  color: var(--text-secondary);
+.footer-logo-techsub {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
 .footer-tagline {

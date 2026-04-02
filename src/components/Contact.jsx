@@ -3,9 +3,8 @@ import './Contact.css'
 
 const contactInfo = [
   { icon: '🌐', label: 'Website', value: 'www.gandivatechsolutions.com', href: 'https://www.gandivatechsolutions.com' },
-  { icon: '📧', label: 'Email', value: 'hello@gandivatechsolutions.com', href: 'mailto:hello@gandivatechsolutions.com' },
+  { icon: '📧', label: 'Email', value: 'info@gandivatechsolutions.com', href: 'mailto:info@gandivatechsolutions.com' },
   { icon: '📍', label: 'Location', value: 'India | Global Operations', href: null },
-  { icon: '⏰', label: 'Availability', value: '24/7 Support | IST Business Hours', href: null },
 ]
 
 const services = [

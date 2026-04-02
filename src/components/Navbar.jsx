@@ -36,7 +36,7 @@ export default function Navbar() {
         <a href="#home" className="logo" onClick={() => handleNavClick('#home')}>
           <img src={gandivaLogo} alt="Gandiva Tech Solutions" className="logo-img" />
           <span className="logo-text">
-            <span className="logo-gandiva">Gandiva</span>
+            <span className="logo-gandiva">GANDIVA</span>
             <span className="logo-tech">Tech Solutions</span>
           </span>
         </a>

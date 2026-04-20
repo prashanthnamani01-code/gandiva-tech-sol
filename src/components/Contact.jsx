@@ -14,13 +14,14 @@ const services = [
   'Cloud & DevOps',
   'Cybersecurity',
   'Operations & Support',
-  'Training & Upskilling',
+  'Corporate Trainings & Upskilling',
+  'Other/Custom Requirement',
 ]
 
 export default function Contact() {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', company: '', service: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', company: '', mobile: '', service: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -40,10 +41,33 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1800))
-    setLoading(false)
-    setSubmitted(true)
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: '6e817897-e7d0-44f1-8cef-814e7ca6acf2',
+          to: 'info@gandivatechsolutions.com',
+          subject: `New Enquiry from ${form.name} – ${form.service || 'General'}`,
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          mobile: form.mobile,
+          service: form.service,
+          message: form.message,
+        }),
+      })
+      const result = await response.json()
+      if (result.success) {
+        setSubmitted(true)
+      } else {
+        alert('Something went wrong. Please try again or email us directly at info@gandivatechsolutions.com')
+      }
+    } catch {
+      alert('Network error. Please try again or email us directly at info@gandivatechsolutions.com')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -138,16 +162,29 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="company">Company Name</label>
-                  <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    placeholder="Your Company"
-                    value={form.company}
-                    onChange={handleChange}
-                  />
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="company">Company Name</label>
+                    <input
+                      id="company"
+                      name="company"
+                      type="text"
+                      placeholder="Your Company"
+                      value={form.company}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="mobile">Contact No</label>
+                    <input
+                      id="mobile"
+                      name="mobile"
+                      type="tel"
+                      placeholder="+91 98765 43210"
+                      value={form.mobile}
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="service">Service Interest</label>

@@ -127,7 +127,7 @@ const serviceDetails = [
   },
   {
     id: 'training',
-    label: '🎓 Training & Upskilling',
+    label: '🎓 Corporate Trainings & Upskilling',
     color: '#f59e0b',
     gradient: 'linear-gradient(135deg, #f59e0b, #84cc16)',
     tagline: 'Build Your AI-Ready Workforce',
